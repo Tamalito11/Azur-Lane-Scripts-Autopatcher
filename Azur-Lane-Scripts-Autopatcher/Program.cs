@@ -26,12 +26,12 @@ namespace Azurlane
             try
             {
                 if (File.Exists(PathMgr.Temp(fileName))) File.Delete(PathMgr.Temp(fileName));
-                if (Directory.Exists(PathMgr.Lua(fileName).Replace("\\CAB-android", ""))) Utils.Rmdir(PathMgr.Lua(fileName).Replace("\\CAB-android", ""));
+                if (Directory.Exists(PathMgr.Lua(fileName).Replace("\\CAB-ios64", ""))) Utils.Rmdir(PathMgr.Lua(fileName).Replace("\\CAB-ios64", ""));
 
                 foreach (var mod in ListOfMod)
                 {
                     if (File.Exists(PathMgr.Temp(mod))) File.Delete(PathMgr.Temp(mod));
-                    if (Directory.Exists(PathMgr.Lua(mod).Replace("\\CAB-android", ""))) Utils.Rmdir(PathMgr.Lua(mod).Replace("\\CAB-android", ""));
+                    if (Directory.Exists(PathMgr.Lua(mod).Replace("\\CAB-ios64", ""))) Utils.Rmdir(PathMgr.Lua(mod).Replace("\\CAB-ios64", ""));
                 }
             }
             catch (Exception e)
@@ -216,7 +216,7 @@ namespace Azurlane
                             try {
                                 Utils.pInfof("Cleaning...");
                                 if (File.Exists(PathMgr.Temp(fileName))) File.Delete(PathMgr.Temp(fileName));
-                                if (Directory.Exists(PathMgr.Lua(fileName).Replace("\\CAB-android", ""))) Utils.Rmdir(PathMgr.Lua(fileName).Replace("\\CAB-android", ""));
+                                if (Directory.Exists(PathMgr.Lua(fileName).Replace("\\CAB-ios64", ""))) Utils.Rmdir(PathMgr.Lua(fileName).Replace("\\CAB-ios64", ""));
                                 Console.Write(" <Done>\n");
                             }
                             catch (Exception e)
